@@ -1,0 +1,101 @@
+---
+title: |
+  | \includegraphics[height=1.5cm,width=3.5cm]{png/AsrLogo.png} \hfill \includegraphics[height=1.5cm,width=3.5cm]{png/QualitasLogo.png} \vspace{1cm}
+  | Automatisierter Tierdatenaustausch
+  | zwischen Melksystemen und Qualitas (ARGUS)
+author: "Sarah Görlich und Peter von Rohr"
+date: \centering 18\. März 2016
+fontsize: 10pt
+output: 
+  beamer_presentation:
+    includes:
+      in_header: tex/quag_beamer_header.tex
+    keep_tex: yes
+    slide_level: 3
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+### Übersicht
+
+* Ausgangslage
+    + Erfassung der Milchmengendaten
+    + Betrieb mit AMS
+    + Datenverarbeitung
+* Ziel: Direkter Datenaustausch
+* Projekt
+
+
+### Ausgangslage
+
+Milchkontrolle auf Betrieben mit Robotermelkanlagen
+
+```{r InsertOdgFigureDiagrammMilchdatenfluss, echo=FALSE, results='asis'}
+rqudocuhelper::insertOdgFigureAsPdf(psOdgFileStem = "Diagramm_Milchdatenfluss")
+```
+
+
+### Betrieb mit AMS
+
+Erfassung der Milchmengendaten
+
+```{r InsertOdgFigureDiagrammMilchkontrolleBetrieb, echo=FALSE, results='asis'}
+rqudocuhelper::insertOdgFigureAsPdf(psOdgFileStem = "Diagramm_Milchkontrolle_DetailBetrieb")
+```
+
+
+### Datenverarbeitung
+
+Milchmengendaten werden von Zuchtorganisationen und Qualitas AG verarbeitet
+
+```{r InsertOdgFigureDiagrammDatenverarbeitungZO, echo=FALSE, results='asis'}
+rqudocuhelper::insertOdgFigureAsPdf(psOdgFileStem = "Diagramm_ZO_Datenverarbeitung")
+```
+
+
+### Ziel: Direkter Datentransfer
+
+```{r InsertOdgFigureDiagrammDirekterDatentransfer, echo=FALSE, results='asis'}
+rqudocuhelper::insertOdgFigureAsPdf(psOdgFileStem = "Diagramm_Milchkontrolle_DirekterDatentransfer")
+```
+
+
+### Projekt: Automatisierter Tierdatenaustausch (ATDA-ASR)
+
+Projekt gliedert sich in drei Teile
+
+1. Export der Daten aus AMS
+2. Datenübertragung vom Betrieb zu Qualitas AG
+3. Import der Daten in ARGUS
+
+
+### Mögliche Datenübertragungsvarianten
+
+1. Fernwartung
+2. Cloud
+3. Webservice
+
+
+### Fernwartung
+
+```{r FigureFernwartung, echo=FALSE, results='asis'}
+rqudocuhelper::insertOdgFigureAsPdf(psOdgFileStem = "Schaubild_ATDA_Fernwartung")
+```
+
+
+### Cloud
+
+```{r FigureCloud, echo=FALSE, results='asis'}
+rqudocuhelper::insertOdgFigureAsPdf(psOdgFileStem = "Schaubild_ATDA_Cloud")
+```
+
+
+### Webservice
+
+```{r FigureWebService, echo=FALSE, results='asis'}
+rqudocuhelper::insertOdgFigureAsPdf(psOdgFileStem = "Schaubild_ATDA_Webservice")
+```
+
