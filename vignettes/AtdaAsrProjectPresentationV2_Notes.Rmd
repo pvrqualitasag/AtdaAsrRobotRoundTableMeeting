@@ -1,0 +1,216 @@
+---
+title: |
+  | \includegraphics[height=1.5cm,width=3.5cm]{png/AsrLogo.png} \hfill \includegraphics[height=1.5cm,width=3.5cm]{png/QualitasLogo.png} \vspace{1cm}
+  | Automatisierter Tierdatenaustausch
+  | zwischen Melksystemen und Qualitas (ARGUS)
+author: "Sarah Görlich und Peter von Rohr"
+date: \centering 18\. März 2016
+fontsize: 10pt
+output: 
+  beamer_presentation:
+    includes:
+      in_header: tex/quag_beamer_header.tex
+    keep_tex: yes
+    slide_level: 3
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+###  Notes
+
+* Begrüssung und Vorstellung (falls nicht schon vorher):
+    + Sehr geehrte Damen und Herren, ich begrüsse sie zu diesem Treffen
+    + Mein Name ist Peter von Rohr und ich arbeite im Fachbereich EDV bei der Qualitas AG
+* Informativer Einsteig:
+    + Ich stelle ihnen den aktuellen Stand des Projekts zum Automatisierten Tierdatenaustausch vor
+    + Wohl gemerkt, wir sind noch ganz am Anfang und das Projekt besteht erst aus ein paar Ideen und Vorschlägen
+    + Da wir zugegebenermassen sehr auf ihre Hilfe angewiesen sind, möchte ich ihnen hier unsere Ideen und Vorschläge vorstellen und bin dann sehr gespannt auf ihre Reaktionen und Rückmeldungen
+    + Damit wir diese Rückmeldungen auch festhalten können, haben wir einen Fragebogen vorbereitet. Den möchten wir Ihnen mit auf den Heimweg geben. Wir bitten sie entweder den Fragebogen auszufüllen und uns zu schicken, oder aber wir würden sie in ca 2 Wochen telefonisch um die Antworten zu den Fragen bitten.
+
+
+### Übersicht
+
+* Ausgangslage
+    + Erfassung der Milchmengendaten
+    + Betrieb mit AMS
+    + Datenverarbeitung
+* Ziel: Direkter Datenaustausch
+* Projekt
+
+
+###  Notes
+
+* Meine Präsentation läuft so ab, dass ich als Ausgangslage die aktuelle Situation bei der Erfassung der Milchmengendaten, mit der sie sicher bestens vertraut sind, beschreibe und daraus dann die Motivation für dieses Projekt folgere. 
+* Aufgrund suboptimaler Umstände bei der Erfassung der Milchmengendaten, welche vor allem auf Betrieben mit Melkrobotern auftreten, hat sich die ASR entschieden, ein Projekt zur Verbesserung dieser Umstände zu initiieren.
+* Einfach gesagt, haben wir einerseits
+    + auf den Betrieben moderne Rechenanlagen und Informationssystem und andererseits
+    + bei den Zuchtorganisationen haben wir auch ein Rechenzentrum und eine Datenbank
+    + dazwischen bei der Übertragung gehen wir wieder 100 Jahre zurück und transferieren die Daten zwischen diesen high-tech Anlagen, wie noch fast zu Gotthelfs-Zeiten.
+* Das zentrale Ziel dieses Projekts ist es die Datenübertragung technologisch auf einen aktuelleren Stand zu bringen.    
+
+### Ausgangslage
+
+Milchkontrolle auf Betrieben mit Robotermelkanlagen
+
+```{r InsertOdgFigureDiagrammMilchdatenfluss, echo=FALSE, results='asis'}
+rcoursetools::insertOdgAsPdf(psOdgFileStem = "Diagramm_Milchdatenfluss")
+```
+
+
+###  Notes
+
+Diese Graphik zeigt schematisch den Ablauf einer monatlichen Milchkontrolle auf einem Betrieb
+
+1. Als erstes werden vorgedruckte Formulare - sogenannte __Begleitscheine__, Etiketten und Milchprobenflaschen zum Milchkontrolleur. Dabei gibt es auch die Möglichkeit, dass Milchprobenflaschen direkt auf den Betrieb geschickt werden
+2. Der Milchkontrolleur geht auf den Betrieb und macht die Milchkontrolle, d.h. die Milchmengen werden auf dem Begleitschein eingetragen und die Milchproben kommen in die dazu vorgesehenen Flaschen.
+3. Die Milchproben kommen dann zu Suisselab ins Labor und die Begleitscheine werden den Zuchtorganisationen geschickt
+4. Die Milchanalyseergebnisse werden dann an die Qualitas übermittelt, wo diese zusammen mit den Milchmengendaten in unsere Datenbank eingetragen werden. Periodisch werden mit diesen Daten auch statistische Auswertungen sogenannte Zuchtwertschätzungen gemacht.
+5. In einem letzten Schritt werden alle Resultate zurück an den Betrieb gemeldet, entweder per Post oder der Betriebsleiter kann sich die Resultate online abrufen.
+
+### Ausgangslage
+
+###  Notes
+
+* __Wichtig__: hier ist es, dass dieser Ablauf, gleich oder ähnlich ist für Betriebe mit Robotermelkanlagen, wie auch für die Betriebe mit konventionellen Melksystemen.
+* Um nochmals die vorhin angesprochenen Konstellation zu verdeutlichen haben wir rechts auf dem Betrieb und links moderne Einrichtungen und dazwischen ist noch das Gotthelf-Zeitalter.
+* Die Datenübertragung dazwischen möchten wir mit diesem Projekt etwas modernisieren.
+
+### Betrieb mit AMS
+
+Erfassung der Milchmengendaten
+
+```{r InsertOdgFigureDiagrammMilchkontrolleBetrieb, echo=FALSE, results='asis'}
+rcoursetools::insertOdgAsPdf(psOdgFileStem = "Diagramm_Milchkontrolle_DetailBetrieb")
+```
+
+
+###  Notes
+
+* Die Graphik gibt noch einen detailierteren Einblick in den Ablauf einer Milchkontrolle auf einem Betrieb mit einem Melkroboter
+* Wir haben hier einen Betrieb mit einem Melkroboter, der ist mit AMS abgekürzt
+* Die Milchmengen werden auf einem Rechner gespeichert, den Bezeichnen wir hier mit ISM. Das ist die Abkürzung für Informationssystem der Melkanlage
+* Der Kontrolleur überträgt dann manuell die Milchmengen vom ISM auf den Begleitschein und schickt dann diesen zur ZO. 
+
+
+### Datenverarbeitung
+
+Milchmengendaten werden von Zuchtorganisationen und Qualitas AG verarbeitet
+
+```{r InsertOdgFigureDiagrammDatenverarbeitungZO, echo=FALSE, results='asis'}
+rcoursetools::insertOdgAsPdf(psOdgFileStem = "Diagramm_ZO_Datenverarbeitung")
+```
+
+
+###  Notes
+
+* Auf der anderen Seite bei der Zuchtorganisation sieht die Verarbeitung so aus, dass der handschriftlich ausgefüllte Begleitschein mit einem Scanner erfasst wird und die Milchmengen dann in die Datenbank bei Qualitas eingefügt werden.
+* Zusammen mit den Ergebnissen aus dem Labor werden die Milchmengen dann an die Betriebe zurückgemeldet.
+
+
+### Ziel: Direkter Datentransfer
+
+```{r InsertOdgFigureDiagrammDirekterDatentransfer, echo=FALSE, results='asis'}
+rcoursetools::insertOdgAsPdf(psOdgFileStem = "Diagramm_Milchkontrolle_DirekterDatentransfer")
+```
+
+
+###  Notes
+
+* Zentrales Ziel dieses Projektes ist sicher die Ablösung der manuellen Übertragung der Milchmengendaten vom Melksystem auf den Begleitschein durch einen direkten Datenaustausch zwischen dem Melksystem und der Datenbank von Qualitas.
+* Der Milchkontrolleur muss trotzdem noch auf den Betrieb damit die Milchproben erhoben werden und damit er die Kühe erfassen kann, welche einerseits neu in Laktation gehen und andererseits jene, welche seit der letzten Kontrolle trocken gestellt wurden
+* Was neu wegfällt ist die Übertragung der Milchmenge auf den Begleitschein. Die Milchmengendaten sollen direkt über eine Internet-basierte Verbindung übertragen werden
+
+
+### Projekt: Automatisierter Tierdatenaustausch (ATDA-ASR)
+
+Projekt gliedert sich in drei Teile
+
+1. Export der Daten aus AMS
+2. Datenübertragung vom Betrieb zu Qualitas AG
+3. Import der Daten in ARGUS
+
+
+###  Notes
+
+* Aufgrund des gezeigten Ablaufs schlagen wir ein Projekt vor, welches sich grob in drei Teile gliedert
+
+1. In einem ersten Schritt müssten die Daten aus dem Informationssystem oder aus dem Rechner an der Melkanlage exportiert werden. Am vorigen Schema gezeigt, müssen wir die Daten, welche wir übermitteln wollen, müssen wir aus dem System exportieren können
+2. In einem zweiten Schritt geht es darum die exportierten Daten zwischen dem Informationssystem der Melkanlage und der Datenbank bei Qualitas zu übertragen
+3. Im dritten Schritt importieren wir die übertragenen Daten in die Datenbank. Dieser dritte Schritt ist hier nicht weiter von Interesse, deshalb werden wir nicht mehr näher darauf eingehen.
+
+
+### Mögliche Datenübertragungsvarianten
+
+1. Fernwartung
+2. Cloud
+3. Webservice
+
+
+###  Notes
+
+* Zum Datenexport vom Rechner der Melkanlage, können wir jetzt noch nicht sehr viel sagen, da sind wir sehr auf ihre Mithilfe angewiesen. Da würden wir gerne in der anschliessenden Diskussion noch etwas mehr erfahren. Als weitere Informationsquelle möchten wir gerne den Fragebogen verwenden. Diesen können sie nach Hause nehmen, dort über mögliche Antworten nachdenken und dann die Antworten entweder per Post oder per Telefon an uns zu übermitteln
+* Bei der Datenübertragung haben wir uns im Vorfeld folgende Möglichkeiten ausgedacht. Diese Varianten sind einfach von uns aus denkbar, aber keineswegs als die einzigen Möglichkeiten zu betrachten. Die folgenden drei Varianten sind von uns aus gesehen denkbar
+
+1. per Fernwartungssoftware
+2. per Cloud-Service
+4. per Webservice
+
+
+
+### Fernwartung
+
+```{r FigureFernwartung, echo=FALSE, results='asis'}
+rcoursetools::insertOdgAsPdf(psOdgFileStem = "Schaubild_ATDA_Fernwartung")
+```
+
+
+###  Notes
+
+* Bei der Datenübertragung per Fernwartungssoftware, funktioniert das so, dass wir ein Programm schreiben, welches die allfällige Schnittstelle der Fernwartungssoftware verwendet, um die Daten zu übertragen.
+* Ein Nachteil dieser Übertragungsvariante ist, dass wenn verschiedene Fernwartungsprogramme und verschiedene Versionen eingesetzt werden, dann bedeutet das für uns ein grosser Arbeitsaufwand
+
+### Cloud
+
+```{r FigureCloud, echo=FALSE, results='asis'}
+rcoursetools::insertOdgAsPdf(psOdgFileStem = "Schaubild_ATDA_Cloud")
+```
+
+
+###  Notes
+
+* Bei der cloud-basierten Lösung nehmen wir an, dass sich sowohl Sender und Empfänger ein Konto bei einem Cloud-dienst haben und den Datenaustausch via das Konto beim Clouddienst machen.
+* Als Clouddienste kommen öffentliche Anbieter oder falls diese existieren interne Cloudlösungen in Frage
+* Bei den öffentlichen Clouddiensten müssen die Aspekte des Datenschutzes sicher genau angeschaut werden.
+
+### Webservice
+
+```{r FigureWebService, echo=FALSE, results='asis'}
+rcoursetools::insertOdgAsPdf(psOdgFileStem = "Schaubild_ATDA_Webservice")
+```
+
+
+###  Notes
+
+* Bei der dritten Übertragungsvariante würden wir einen Webservice so aufsetzen, dass die Datenübertragung über diesen Webservice abgewickelt werden kann
+* Dazu würde auf der Seite des Betriebes ein sogenanntes Client-Programm laufen, welches den Server abfragt, welche Informationen zu übertragen sind
+* Der Server antwortet dann mit der Angabe der zu übertragenden Daten
+* Als Antwort darauf überträgt der Client dann die Daten
+
+### Ende
+
+
+\centering \huge Vielen Dank
+
+für Ihre Aufmerksamkeit!!!
+
+Fragen?
+
+
+###  Notes
+
+* Das ist alles von meiner Seite. 
+* Ich bedanke mich für ihre Aufmerksamkeit.
+* Falls sie Fragen haben, versuche ich gerne diese zu beantworten

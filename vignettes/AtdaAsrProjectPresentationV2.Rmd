@@ -5,7 +5,7 @@ title: |
   | zwischen Melksystemen und Qualitas (ARGUS)
 author: "Sarah Görlich und Peter von Rohr"
 date: \centering 18\. März 2016
-fontsize: 10pt
+fontsize: 12pt
 output: 
   beamer_presentation:
     includes:
@@ -34,7 +34,7 @@ knitr::opts_chunk$set(echo = FALSE)
 Milchkontrolle auf Betrieben mit Robotermelkanlagen
 
 ```{r InsertOdgFigureDiagrammMilchdatenfluss, echo=FALSE, results='asis'}
-rqudocuhelper::insertOdgFigureAsPdf(psOdgFileStem = "Diagramm_Milchdatenfluss")
+rcoursetools::insertOdgAsPdf(psOdgFileStem = "Diagramm_Milchdatenfluss")
 ```
 
 
@@ -43,7 +43,7 @@ rqudocuhelper::insertOdgFigureAsPdf(psOdgFileStem = "Diagramm_Milchdatenfluss")
 Erfassung der Milchmengendaten
 
 ```{r InsertOdgFigureDiagrammMilchkontrolleBetrieb, echo=FALSE, results='asis'}
-rqudocuhelper::insertOdgFigureAsPdf(psOdgFileStem = "Diagramm_Milchkontrolle_DetailBetrieb")
+rcoursetools::insertOdgAsPdf(psOdgFileStem = "Diagramm_Milchkontrolle_DetailBetrieb")
 ```
 
 
@@ -52,14 +52,14 @@ rqudocuhelper::insertOdgFigureAsPdf(psOdgFileStem = "Diagramm_Milchkontrolle_Det
 Milchmengendaten werden von Zuchtorganisationen und Qualitas AG verarbeitet
 
 ```{r InsertOdgFigureDiagrammDatenverarbeitungZO, echo=FALSE, results='asis'}
-rqudocuhelper::insertOdgFigureAsPdf(psOdgFileStem = "Diagramm_ZO_Datenverarbeitung")
+rcoursetools::insertOdgAsPdf(psOdgFileStem = "Diagramm_ZO_Datenverarbeitung")
 ```
 
 
 ### Ziel: Direkter Datentransfer
 
 ```{r InsertOdgFigureDiagrammDirekterDatentransfer, echo=FALSE, results='asis'}
-rqudocuhelper::insertOdgFigureAsPdf(psOdgFileStem = "Diagramm_Milchkontrolle_DirekterDatentransfer")
+rcoursetools::insertOdgAsPdf(psOdgFileStem = "Diagramm_Milchkontrolle_DirekterDatentransfer")
 ```
 
 
@@ -82,20 +82,29 @@ Projekt gliedert sich in drei Teile
 ### Fernwartung
 
 ```{r FigureFernwartung, echo=FALSE, results='asis'}
-rqudocuhelper::insertOdgFigureAsPdf(psOdgFileStem = "Schaubild_ATDA_Fernwartung")
+rcoursetools::insertOdgAsPdf(psOdgFileStem = "Schaubild_ATDA_Fernwartung")
 ```
 
 
 ### Cloud
 
 ```{r FigureCloud, echo=FALSE, results='asis'}
-rqudocuhelper::insertOdgFigureAsPdf(psOdgFileStem = "Schaubild_ATDA_Cloud")
+rcoursetools::insertOdgAsPdf(psOdgFileStem = "Schaubild_ATDA_Cloud")
 ```
 
 
 ### Webservice
 
 ```{r FigureWebService, echo=FALSE, results='asis'}
-rqudocuhelper::insertOdgFigureAsPdf(psOdgFileStem = "Schaubild_ATDA_Webservice")
+rcoursetools::insertOdgAsPdf(psOdgFileStem = "Schaubild_ATDA_Webservice")
 ```
 
+
+### Ende
+
+
+\centering \huge Vielen Dank
+
+für Ihre Aufmerksamkeit!!!
+
+Fragen?
