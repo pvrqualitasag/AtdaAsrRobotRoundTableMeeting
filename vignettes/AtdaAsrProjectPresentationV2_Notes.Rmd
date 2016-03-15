@@ -64,7 +64,7 @@ rcoursetools::insertOdgAsPdf(psOdgFileStem = "Diagramm_Milchdatenfluss")
 
 Diese Graphik zeigt schematisch den Ablauf einer monatlichen Milchkontrolle auf einem Betrieb
 
-1. Als erstes werden vorgedruckte Formulare - sogenannte __Begleitscheine__, Etiketten und Milchprobenflaschen zum Milchkontrolleur. Dabei gibt es auch die Möglichkeit, dass Milchprobenflaschen direkt auf den Betrieb geschickt werden
+1. Als erstes werden vorgedruckte Formulare - sogenannte __Begleitscheine__, Etiketten und Milchprobenflaschen zum Milchkontrolleur geschickt. Dabei gibt es neuerdings auch die Möglichkeit, dass Milchprobenflaschen direkt auf den Betrieb geschickt werden
 2. Der Milchkontrolleur geht auf den Betrieb und macht die Milchkontrolle, d.h. die Milchmengen werden auf dem Begleitschein eingetragen und die Milchproben kommen in die dazu vorgesehenen Flaschen.
 3. Die Milchproben kommen dann zu Suisselab ins Labor und die Begleitscheine werden den Zuchtorganisationen geschickt
 4. Die Milchanalyseergebnisse werden dann an die Qualitas übermittelt, wo diese zusammen mit den Milchmengendaten in unsere Datenbank eingetragen werden. Periodisch werden mit diesen Daten auch statistische Auswertungen sogenannte Zuchtwertschätzungen gemacht.
