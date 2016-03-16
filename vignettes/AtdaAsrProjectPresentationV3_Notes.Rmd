@@ -29,13 +29,13 @@ knitr::opts_chunk$set(echo = FALSE)
 
 
 ###  Notes
-Informativer Einsteig:
+{Informativer Einsteig:}
 
 * Ich stelle ihnen den aktuellen Stand des Projekts zum Automatisierten Tierdatenaustausch vor
 * Ich muss hier gleich vorausschicken, dass wir mit diesem Projekt noch ganz am Anfang stehen
 * Also alles, was ich ihnen hier zeigen werde, sind Ideen und Vorschläge, wie ein solcher Datenaustausch realisert werden könnte.
-* Lassen sie mich auch eines klar und deutlich vorausschicken, wir sind sehr auf ihre Hilfe angewiesen. Ohne sie geht gar nichts, weil die Daten, die wir gerne transferieren möchten, sind in ihren Systemen auf den Betrieben abgelegt. 
-* Damit wir alle auf den gleich Informationsstand kommen, möchte ich ihnen hier unsere Ideen und Vorschläge vorstellen und bin dann sehr gespannt auf ihre Reaktionen und Rückmeldungen
+* Lassen sie mich auch eines klar und deutlich vorausschicken, wir sind sehr auf ihre Hilfe angewiesen, weil die Daten, die wir gerne transferieren möchten, sind in ihren Systemen auf den Betrieben abgelegt. 
+* Nach der Vorstellung des Projektes und bin dann sehr gespannt auf ihre Reaktionen und Rückmeldungen
 * Damit wir diese Rückmeldungen auch festhalten können, haben wir einen Fragebogen vorbereitet. Den möchten wir Ihnen mit auf den Heimweg geben. Wir bitten sie entweder den Fragebogen auszufüllen und uns zu schicken, oder aber wir würden sie in ca 2 Wochen telefonisch um die Antworten zu den Fragen bitten.
 
 
@@ -51,13 +51,16 @@ Informativer Einsteig:
 
 ###  Notes
 
-* Meine Präsentation läuft so ab, dass ich als Ausgangslage die aktuelle Situation bei der Erfassung der Milchmengendaten, mit der sie sicher bestens vertraut sind, beschreibe und daraus dann die Motivation für dieses Projekt folgere. 
-* Aufgrund suboptimaler Umstände bei der Erfassung der Milchmengendaten, welche vor allem auf Betrieben mit Melkrobotern auftreten, hat sich die ASR entschieden, ein Projekt zur Verbesserung dieser Umstände zu initiieren.
-* Einfach gesagt, haben wir einerseits
-    + auf den Betrieben moderne Rechenanlagen und Informationssystem und andererseits
+* Meine Präsentation läuft so ab, dass ich in groben Zügen die Abläufe während einer Milchkontrolle beschreibe
+* Damit sind sie sicher alle bestens vertraut.
+* Aus diese Abläufen erkläre ich dann, weshalb dieses Projekt überhaupt zu Stande kommt und wieso das sinnvoll ist.
+* Einfach gesagt, haben wir doch folgende Situation, einerseits
+    + gibt es auf den Betrieben moderne Rechenanlagen und Informationssystem und andererseits
     + bei den Zuchtorganisationen haben wir auch ein Rechenzentrum und eine Datenbank
-    + dazwischen bei der Übertragung gehen wir wieder 100 Jahre zurück und transferieren die Daten zwischen diesen high-tech Anlagen, wie noch fast zu Gotthelfs-Zeiten.
-* Das zentrale Ziel dieses Projekts ist es die Datenübertragung technologisch auf einen aktuelleren Stand zu bringen.    
+    + aber dazwischen werden die Daten noch übertragen wie noch fast zu Gotthelfs-Zeiten. Da schreibt der Kontrolleur die Milchmengen auf den Begleitschein und schickt den an die Zuchtorganisation.
+* Es liegt auf der Hand, dass bei der Datenübertragung Verbesserungspotential vorhanden ist und das wollen wir in diesem Projekt umsetzen. 
+* Somit ist das zentrale Ziel dieses Projekts die Datenübertragung technologisch auf einen aktuelleren Stand zu bringen.    
+
 
 ### Ausgangslage
 
@@ -75,14 +78,14 @@ Diese Graphik zeigt schematisch den Ablauf einer monatlichen Milchkontrolle auf 
 1. Als erstes werden vorgedruckte Formulare - sogenannte __Begleitscheine__, Etiketten und Milchprobenflaschen zum Milchkontrolleur geschickt. Dabei gibt es neuerdings auch die Möglichkeit, dass Milchprobenflaschen direkt auf den Betrieb geschickt werden
 2. Der Milchkontrolleur geht auf den Betrieb und macht die Milchkontrolle, d.h. die Milchmengen werden auf dem Begleitschein eingetragen und die Milchproben kommen in die dazu vorgesehenen Flaschen.
 3. Die Milchproben kommen dann zu Suisselab ins Labor und die Begleitscheine werden den Zuchtorganisationen geschickt
-4. Die Milchanalyseergebnisse werden dann an die Qualitas übermittelt, wo diese zusammen mit den Milchmengendaten in unsere Datenbank eingetragen werden. Periodisch werden mit diesen Daten auch statistische Auswertungen sogenannte Zuchtwertschätzungen gemacht.
+4. Die Milchanalyseergebnisse werden dann an die Qualitas übermittelt, wo diese zusammen mit den Milchmengendaten in unsere Datenbank eingetragen werden. 
 5. Im letzten Schritt werden Resultate zurück an den Betrieb gemeldet, entweder per Post oder online.
 
 ### Ausgangslage
 
 ###  Notes
 
-* __Wichtig__: hier ist es, dass dieser Ablauf, gleich oder ähnlich ist für Betriebe mit Robotermelkanlagen, wie auch für die Betriebe mit konventionellen Melksystemen.
+* __Wichtig__: hier ist es, dass dieser Ablauf, im wesentlichen gleich oder ähnlich ist ob ein Betrieb mit einer Robotermelkanlagen oder mit einem konventionellen Melksystemen ausgestattet ist.
 * Um nochmals die vorhin angesprochenen Konstellation zu verdeutlichen haben wir rechts auf dem Betrieb und links moderne Einrichtungen und dazwischen ist noch das Gotthelf-Zeitalter.
 * Die Datenübertragung dazwischen möchten wir mit diesem Projekt etwas modernisieren.
 
