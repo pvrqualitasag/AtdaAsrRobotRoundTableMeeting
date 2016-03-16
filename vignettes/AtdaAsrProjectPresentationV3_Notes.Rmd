@@ -20,15 +20,6 @@ knitr::opts_chunk$set(echo = FALSE)
 
 
 ###  Notes
-
-* Begrüssung und Vorstellung (falls nicht schon vorher):
-    + Sehr geehrte Damen und Herren, ich begrüsse sie zu diesem Treffen
-    + Mein Name ist Peter von Rohr und ich arbeite im Fachbereich EDV bei der Qualitas AG
-
-### Einstieg
-
-
-###  Notes
 {Informativer Einsteig:}
 
 * Ich stelle ihnen den aktuellen Stand des Projekts zum Automatisierten Tierdatenaustausch vor
